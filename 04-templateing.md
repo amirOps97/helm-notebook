@@ -222,7 +222,7 @@ a: "true"
 b: 'true'
 c: "1.10"
 ```
-> ⚠️ `version: 1.10` in values.yaml is already the **float** `1.1`. Quote it in values.yaml: `version: "1.10"`.
+>  `version: 1.10` in values.yaml is already the **float** `1.1`. Quote it in values.yaml: `version: "1.10"`.
 
 #### `default`
 values.yaml
