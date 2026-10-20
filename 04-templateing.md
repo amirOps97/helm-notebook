@@ -397,7 +397,7 @@ data:
   password: Wk5xN2RqVjRMcU1ia0hwVA==
 ```
 On every upgrade the **same** password is reused.
-> ⚠️ `lookup` returns an empty result in `helm template` and client-side `--dry-run`, so you'll always see the `else` branch there.
+> `lookup` returns an empty result in `helm template` and client-side `--dry-run`, so you'll always see the `else` branch there.
 
 #### `fail`
 values.yaml
@@ -684,15 +684,15 @@ metadata:
 ### Why `include` and not `template`
 ```yaml
 labels:
-  {{- include "mychart.labels" . | nindent 4 }}   # ✅ output can be piped → correctly indented
+  {{- include "mychart.labels" . | nindent 4 }}   # output can be piped → correctly indented
 labels:
-  {{ template "mychart.labels" . }}               # ❌ can't pipe → second line lands at column 0
+  {{ template "mychart.labels" . }}               #  can't pipe → second line lands at column 0
 ```
 
 ### Always pass the context `.`
 ```yaml
-{{ include "mychart.labels" . }}    # ✅ app.kubernetes.io/instance: demo
-{{ include "mychart.labels" }}      # ❌ error / empty values — the template gets no data
+{{ include "mychart.labels" . }}    # app.kubernetes.io/instance: demo
+{{ include "mychart.labels" }}      #  error / empty values — the template gets no data
 ```
 
 ---
