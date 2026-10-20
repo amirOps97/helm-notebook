@@ -53,7 +53,7 @@ helm history <release>
 helm rollback <release> [revision]         # no revision = previous one
 ```
 
-> ⚠️ `--reuse-values` can hide new defaults added in a newer chart version. Prefer passing your full values files every time.
+> `--reuse-values` can hide new defaults added in a newer chart version. Prefer passing your full values files every time.
 
 ## Inspecting releases
 ```bash
