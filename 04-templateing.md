@@ -2,11 +2,6 @@
 
 Helm uses Go's `text/template` plus the **Sprig** function library and a few Helm-specific functions.
 
-> **Setup used in all examples below**
-> Release `demo` in namespace `dev`, chart `mychart` version `0.1.0`, appVersion `1.27.0`.
-> Each example shows **values.yaml → template → rendered output**.
-> Try any of them with: `helm template demo ./mychart -n dev`
-
 ---
 
 ## Built-in objects
