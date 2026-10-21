@@ -1,4 +1,4 @@
-# 09 · Best Practices
+# 06 · Best Practices
 
 ## Charts
 - Bump `version` in `Chart.yaml` on every chart change (SemVer).
