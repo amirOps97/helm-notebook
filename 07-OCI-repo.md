@@ -1,4 +1,4 @@
-# 07 · Repositories & OCI
+# 08 · Repositories & OCI
 
 ## Packaging
 ```bash
