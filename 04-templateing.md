@@ -723,6 +723,13 @@ output
       annotations:
         checksum/config: 6f1c0e...   # 64-char hash, changes whenever logLevel changes
 ```
+`$` means the root context in Go templates.
+`.Template.BasePath` provides the base path for the current chart template.
+`configmap.yaml` This is simply a string containing the filename you want to append.
+The `print` function combines the two pieces of text.
+`print` constructs the path to the ConfigMap template
+`print` does not read a file from your computer. It constructs a string that Helm's include function uses to find and render a named template.
+
 Try it: `helm upgrade demo ./mychart --set logLevel=debug` → pods restart.
 
 ---
