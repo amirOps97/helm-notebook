@@ -1,0 +1,5 @@
+{{ .Chart.Name }} is installed as release "{{ .Release.Name }}" in namespace "{{ .Release.Namespace }}".
+
+To reach it locally:
+  kubectl port-forward svc/{{ include "mychart.fullname" . }} 8080:{{ .Values.service.port }} -n {{ .Release.Namespace }}
+  open http://localhost:8080

@@ -1,0 +1,33 @@
+# Number of pod replicas
+replicaCount: 1
+
+image:
+  # Container image repository
+  repository: nginx
+  # Image tag; defaults to Chart.appVersion when empty
+  tag: ""
+  pullPolicy: IfNotPresent
+
+# Override the generated resource names
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 80
+
+# Extra environment variables (key: value)
+env: {}
+  # LOG_LEVEL: info
+
+# Content of the app config file mounted into the pod
+config:
+  greeting: "Hello from Helm"
+
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+tolerations: []
